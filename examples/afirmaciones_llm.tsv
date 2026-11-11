@@ -1,0 +1,5 @@
+ex:oc1	rdf:type	ex:Servicio
+ex:oc1	rdf:type	ex:Bien
+ex:oc1	ex:unidadCobro	hora
+ex:minsal	ex:contiene	ex:hospitalX
+ex:oc1	ex:compradoPor	ex:ssSur

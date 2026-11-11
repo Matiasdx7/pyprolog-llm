@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyprolog-llm"
+version = "0.2.0"
+description = "Pure-Python Prolog engine for explainable semantic context: embedding cohorts, traceability and inference validation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Matías Guajardo Uribe" }]
+keywords = ["prolog", "logic programming", "neuro-symbolic", "embeddings", "explainability", "ontology", "owl", "rdf", "shacl", "knowledge graph"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+rdf = ["rdflib>=7"]
+dev = ["pytest>=7", "rdflib>=7"]
+
+[project.urls]
+Homepage = "https://github.com/tu-usuario-github/pyprolog-llm"
+Issues = "https://github.com/tu-usuario-github/pyprolog-llm/issues"
+
+[project.scripts]
+pyprolog-llm = "pyprolog_llm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
